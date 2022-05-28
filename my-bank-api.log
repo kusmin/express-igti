@@ -107,3 +107,57 @@
 2022-05-24T22:32:17.334Z [my-bank-api] info: API Started!
 2022-05-24T22:32:30.548Z [my-bank-api] info: API Started!
 2022-05-24T22:34:07.197Z [my-bank-api] info: API Started!
+2022-05-27T20:31:27.338Z [my-bank-api] info: API Started!
+2022-05-27T20:32:15.065Z [my-bank-api] info: GET /account
+2022-05-27T20:34:40.706Z [my-bank-api] info: POST /account - {"id":4,"name":"Juca Maira Alves","balance":988.5}
+2022-05-27T20:34:49.227Z [my-bank-api] info: POST /account - {"id":5,"name":"Juca leandro Alves","balance":988.5}
+2022-05-27T20:35:03.965Z [my-bank-api] info: POST /account - {"id":6,"name":"Karpov lists","balance":95454}
+2022-05-27T20:36:02.436Z [my-bank-api] info: API Started!
+2022-05-27T20:39:08.846Z [my-bank-api] info: GET /account
+2022-05-27T20:39:10.038Z [my-bank-api] info: GET /account
+2022-05-27T20:39:11.333Z [my-bank-api] info: GET /account
+2022-05-27T20:39:15.028Z [my-bank-api] error: GET /account - Cannot read property 'find' of undefined
+2022-05-27T20:39:20.477Z [my-bank-api] error: GET /account - Cannot read property 'find' of undefined
+2022-05-27T20:39:42.023Z [my-bank-api] info: GET /account
+2022-05-27T20:40:40.528Z [my-bank-api] info: API Started!
+2022-05-27T20:40:43.423Z [my-bank-api] info: GET /account
+2022-05-27T20:41:07.866Z [my-bank-api] error: GET /account - Registro não encontrado.
+2022-05-27T20:41:12.559Z [my-bank-api] info: GET /account/id
+2022-05-28T01:57:24.607Z [my-bank-api] info: API Started and File Created!
+2022-05-28T13:32:26.685Z [my-bank-api] info: API Started!
+2022-05-28T13:39:40.718Z [my-bank-api] info: API Started!
+2022-05-28T13:41:59.263Z [my-bank-api] info: API Started!
+2022-05-28T13:42:10.268Z [my-bank-api] info: GET /account
+2022-05-28T13:49:21.652Z [my-bank-api] info: API Started!
+2022-05-28T13:53:21.026Z [my-bank-api] info: API Started!
+2022-05-28T13:54:35.129Z [my-bank-api] info: API Started!
+2022-05-28T13:54:58.308Z [my-bank-api] info: API Started!
+2022-05-28T13:57:13.521Z [my-bank-api] info: API Started!
+2022-05-28T13:58:36.411Z [my-bank-api] info: API Started!
+2022-05-28T13:59:30.476Z [my-bank-api] info: API Started!
+2022-05-28T13:59:43.788Z [my-bank-api] info: API Started!
+2022-05-28T13:59:45.704Z [my-bank-api] info: API Started!
+2022-05-28T13:59:49.395Z [my-bank-api] info: API Started!
+2022-05-28T14:00:37.376Z [my-bank-api] info: API Started!
+2022-05-28T14:02:04.349Z [my-bank-api] info: API Started!
+2022-05-28T14:03:02.754Z [my-bank-api] info: API Started!
+2022-05-28T14:07:32.096Z [my-bank-api] info: API Started!
+2022-05-28T14:07:59.219Z [my-bank-api] info: API Started!
+2022-05-28T14:08:08.453Z [my-bank-api] info: API Started!
+2022-05-28T14:08:33.706Z [my-bank-api] info: API Started!
+2022-05-28T14:08:40.922Z [my-bank-api] info: API Started!
+2022-05-28T14:09:25.423Z [my-bank-api] info: API Started!
+2022-05-28T14:12:19.514Z [my-bank-api] info: API Started!
+2022-05-28T14:14:06.754Z [my-bank-api] info: API Started!
+2022-05-28T14:27:50.272Z [my-bank-api] info: API Started!
+2022-05-28T14:29:37.725Z [my-bank-api] info: API Started!
+2022-05-28T14:30:16.059Z [my-bank-api] info: API Started!
+2022-05-28T14:33:33.627Z [my-bank-api] info: API Started!
+2022-05-28T14:50:14.467Z [my-bank-api] info: API Started!
+2022-05-28T14:51:34.226Z [my-bank-api] info: API Started!
+2022-05-28T15:02:11.715Z [my-bank-api] info: API Started!
+2022-05-28T15:06:44.808Z [my-bank-api] info: API Started!
+2022-05-28T15:07:25.808Z [my-bank-api] info: API Started!
+2022-05-28T15:08:03.529Z [my-bank-api] info: API Started!
+2022-05-28T15:09:23.398Z [my-bank-api] info: API Started!
+2022-05-28T15:09:41.020Z [my-bank-api] info: API Started!

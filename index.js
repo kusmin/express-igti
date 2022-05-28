@@ -1,5 +1,6 @@
 import cors from "cors";
 import express from "express";
+import { graphqlHTTP } from "express-graphql";
 import {
     promises as fs
 } from "fs";
@@ -9,6 +10,8 @@ import {
     swagger
 } from "./doc.js";
 import accountsRouter from "./routes/accounts.routes.js";
+import Schema from "./schema/index.js";
+
 
 const {
     readFile,
@@ -46,9 +49,51 @@ global.logger = winston.createLogger({
         }),
         timestamp(),
         myFormat
-
     )
 })
+
+/**const schema = buildSchema(`
+    type Account {
+        id: Int
+        name: String
+        balance: Float
+    }
+
+    input AccountInput{
+        id: Int
+        name: String
+        balance: Float
+    }
+
+    type Query {
+        getAccounts: [Account]
+        getAccount(id: Int): Account
+    }
+
+    type Mutation{
+        createAccount(account: AccountInput): Account
+        deleteAccount(id: Int): Boolean
+        updateAccount(account: AccountInput): Account
+    }
+`);
+
+const root = {
+    getAccounts: () => accountService.getAccounts(),
+    getAccount(args) {
+        return accountService.getAccount(args.id);
+    },
+
+    createAccount({ account }) {
+        return accountService.createAccount(account);
+    },
+    deleteAccount(args) {
+        accountService.deleteAccount(args.id)
+    },
+    updateAccount({ account }) {
+        return accountService.editAccount(account);
+    }
+}
+**/
 
 const app = express();
 app.use(express.json());
@@ -57,6 +102,12 @@ app.use(express.static("public"));
 app.use("/doc", swaggerUi.serve, swaggerUi.setup(swagger))
 
 app.use("/account", accountsRouter);
+
+app.use("/graphql", graphqlHTTP({
+    schema: Schema,
+    //rootValue: root,
+    graphiql: true
+}));
 
 const newLocal = async () => {
 

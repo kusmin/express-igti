@@ -4,7 +4,7 @@ const { readFile, writeFile } = fs;
 
 async function getAccounts() {
     const jsonData = JSON.parse(await readFile(fileName));
-    return jsonData.getAccounts;
+    return jsonData.accounts;
 }
 
 async function insertAccount(account) {
