@@ -1,5 +1,6 @@
 import cors from "cors";
 import express from "express";
+import basicAuth from "express-basic-auth";
 import { graphqlHTTP } from "express-graphql";
 import {
     promises as fs
@@ -101,8 +102,46 @@ app.use(cors())
 app.use(express.static("public"));
 app.use("/doc", swaggerUi.serve, swaggerUi.setup(swagger))
 
-app.use("/account", accountsRouter);
+function getRole(username) {
+    if (username == 'admin') {
+        return 'admin';
+    }
+}
 
+function authorize(...allowed) {
+    return (req, res, next) => {
+
+        const isAllowed = role => allowed.indexOf(role) > -1;
+
+        if (req.auth.user) {
+            const role = getRole(req.auth.user);
+
+            if (isAllowed(role)) {
+                next()
+            } else {
+                res.status(401).send('Role not allowed')
+            }
+        } else {
+            res.status(403).send('User not found');
+        }
+
+    }
+}
+
+
+app.use(basicAuth({
+    authorizer: (username, password) => {
+
+        const userMath = basicAuth.safeCompare(username, 'admin')
+        const pwdMath = basicAuth.safeCompare(password, 'admin')
+
+        return userMath && pwdMath;
+    }
+}))
+
+
+
+app.use("/account", authorize('admin', 'role'), accountsRouter);
 app.use("/graphql", graphqlHTTP({
     schema: Schema,
     //rootValue: root,
